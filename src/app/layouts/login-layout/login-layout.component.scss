@@ -1,0 +1,22 @@
+.body-login{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 3rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../../../assets/img/background_container.jpg);
+
+    .field{
+        background-color: rgb(214, 214, 214);
+        padding: 4rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+}
