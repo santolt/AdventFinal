@@ -6,7 +6,7 @@ const routes: Routes = [
 
   {
     path: "",
-    loadChildren: ()=> import('./layouts/login-layout/login-layout.module').then(m=> m.LoginLayoutModule)
+    loadChildren: ()=> import("./layouts/main-layout/main-layout.module").then(m=> m.MainLayoutModule)
   },
   {
     path: "login",
