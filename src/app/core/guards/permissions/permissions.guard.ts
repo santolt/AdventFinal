@@ -14,11 +14,6 @@ export class PermissionsGuard implements CanActivate {
 
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-    // if(this.hasUser()){
-    //   return true
-    // }
-    // alert("You don't have persmissions")
-    // return false
 
     if(!this.authService.isTokenExpired()){
       return true
@@ -27,9 +22,5 @@ export class PermissionsGuard implements CanActivate {
     return false
 
   }
-
-  // hasUser():boolean{
-  //   return false
-  // }
   
 }

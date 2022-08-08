@@ -14,5 +14,6 @@ export class LoginLayoutComponent {
   goDashboard():void{
     this.router.navigate(["/dashboard"])
   }
+  
 
 }
