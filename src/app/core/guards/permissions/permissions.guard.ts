@@ -16,6 +16,8 @@ export class PermissionsGuard implements CanActivate {
     
 
     if(!this.authService.isTokenExpired()){
+      alert("No tienes acceso")
+
       return true
     }
     this.router.navigate(["/login"])

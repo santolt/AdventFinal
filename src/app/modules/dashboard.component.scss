@@ -1,0 +1,28 @@
+.container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ng-tns-c37-0{
+        width: 20% !important;
+
+    }
+
+    .filter{
+        width: 80%;
+    }
+
+    table {
+        width: 80%;
+      }
+      
+      .mat-form-field {
+        font-size: 14px;
+        width: 100%;
+      }
+}
+
+mat-paginator{
+    margin-top: 1rem;
+}
