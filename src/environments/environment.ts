@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  cosmoUrl: `https://emodelcosmosdb.documents.azure.com/`,
+  cosmoKey: `0VuVEdik6OIbDxOg0Z5UgRU8iQJ3nYQPhji0fxT3vOHPQPlMcOLmDjO3FKHdqSP9g56RhaUzIG1IwqOHeF9OCg==`
 };
 
 /*
