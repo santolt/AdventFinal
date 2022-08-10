@@ -1,4 +1,4 @@
-<form class="body-login">
+<form class="body-login" (submit)="send()" [formGroup]="formLogin">
   <div class="field">
     <div class="login">
       <img src="./assets/img/emodal-logo-trans-e93930.png" alt="" />
@@ -6,13 +6,32 @@
     </div>
 
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Username" />
+      <input
+        formControlName="email"
+        matInput
+        placeholder="Username"
+        type="text"
+        id="email"
+      />
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Password" />
+      <input
+        formControlName="password"
+        matInput
+        placeholder="Password"
+        type="password"
+        id="password"
+      />
     </mat-form-field>
 
-    <button mat-button (click)="goDashboard()">Submit</button>
+    <button mat-button  [disabled]="formLogin.invalid">Submit</button>
   </div>
 </form>
+
+
+<h1>Validador</h1>
+<pre>
+  Valido: {{formLogin.valid | json}}
+</pre>
+ 

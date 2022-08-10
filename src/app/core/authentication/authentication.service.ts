@@ -36,7 +36,7 @@ export class AuthenticationService {
       return true;
     }
     return this.helper.isTokenExpired(token);*/
-    return false;
+    return true;
   }
 
 }

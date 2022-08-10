@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,12 +9,21 @@ import { Router } from '@angular/router';
 })
 export class LoginLayoutComponent {
 
-  constructor(private router: Router) { }
+  formLogin: FormGroup;
+
+  constructor(private router: Router, public formBuilder: FormBuilder) { 
+    this.formLogin = formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    })
+  }
 
 
   goDashboard():void{
     this.router.navigate(["/dashboard"])
   }
   
-
+  send():any{
+    
+  }
 }
