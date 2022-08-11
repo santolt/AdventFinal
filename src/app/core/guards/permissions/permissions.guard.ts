@@ -15,18 +15,18 @@ export class PermissionsGuard implements CanActivate {
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
 
-    // if(!this.authService.isTokenExpired()){
-    //   // alert("No tienes acceso")
+    if(!this.authService.isTokenExpired()){
+      // alert("No tienes acceso")
 
-    //   return true
-    let isLoggedIn = this.authService.isTokenExpired()
+      return true
+    // let isLoggedIn = this.authService.isTokenExpired()
 
-    if (isLoggedIn) {
-      return false;
+    // if (isLoggedIn) {
+    //   return false;
 
     }
     this.router.navigate(["/login"])
-    return true
+    return false
 
   }
   

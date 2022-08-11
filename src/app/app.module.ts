@@ -10,11 +10,13 @@ import { environment } from '../environments/environment';
 import { LoginLayoutModule } from './layouts/login-layout/login-layout.module';
 import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginatorPipe } from './core/pipes/paginator.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PaginatorPipe,
   ],
   imports: [
     BrowserModule,

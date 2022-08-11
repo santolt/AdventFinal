@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path:"",
     component: MainLayoutComponent,
-    canActivate:[PermissionsGuard],
+    // canActivate:[PermissionsGuard],
     children:[
       {
         path:"",
