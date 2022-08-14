@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login-layout',
@@ -10,20 +10,46 @@ import { Router } from '@angular/router';
 export class LoginLayoutComponent {
 
   formLogin: FormGroup;
+  loading: boolean = false;
 
-  constructor(private router: Router, public formBuilder: FormBuilder) { 
+  constructor( public formBuilder: FormBuilder, private _snackBar: MatSnackBar ) { 
     this.formLogin = formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required,]]
     })
   }
 
 
-  goDashboard():void{
-    this.router.navigate(["/dashboard"])
-  }
-  
-  send():any{
+  loginIn(){
+    console.log(this.formLogin);
     
+    const email = this.formLogin.value.email;
+    const password = this.formLogin.value.password;
+
+    if(email === 'ssuarez@lean-tech.io' && password === '123456'){
+
+    }else{
+      this.error()
+      this.formLogin.reset()
+    }
   }
+
+  error(){
+    this._snackBar.open('User or Password was incorrect!!', '', {
+      duration: 5000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top'
+    })
+
+  }
+
+  fakeLoading(){
+    this.loading = true;
+
+    setTimeout(() => {
+      
+    }, 1500);
+  }
+
+
 }

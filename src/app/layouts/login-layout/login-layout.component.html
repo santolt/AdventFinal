@@ -1,4 +1,6 @@
-<form class="body-login" (submit)="send()" [formGroup]="formLogin">
+
+<mat-spinner *ngIf="loading" diameter="40"></mat-spinner>
+<form *ngIf="!loading" class="body-login" (ngSubmit)="loginIn()" [formGroup]="formLogin">
   <div class="field">
     <div class="login">
       <img src="./assets/img/emodal-logo-trans-e93930.png" alt="" />
@@ -9,9 +11,8 @@
       <input
         formControlName="email"
         matInput
-        placeholder="Username"
+        placeholder="Email"
         type="text"
-        id="email"
       />
     </mat-form-field>
 
@@ -21,17 +22,9 @@
         matInput
         placeholder="Password"
         type="password"
-        id="password"
       />
     </mat-form-field>
 
-    <button mat-button  [disabled]="formLogin.invalid">Submit</button>
+    <button mat-button  [disabled]="formLogin.invalid" type="submit">Submit</button>
   </div>
 </form>
-
-
-<h1>Validador</h1>
-<pre>
-  Valido: {{formLogin.valid | json}}
-</pre>
- 
