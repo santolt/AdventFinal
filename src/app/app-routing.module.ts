@@ -5,6 +5,11 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
 const routes: Routes = [
 
   {
+    path:"",
+    pathMatch:"full",
+    redirectTo:"login",
+  },
+  {
     path: "",
     loadChildren: ()=> import("./layouts/main-layout/main-layout.module").then(m=> m.MainLayoutModule)
   },
@@ -12,6 +17,11 @@ const routes: Routes = [
     path: "login",
     component: LoginLayoutComponent
   },
+  {
+    path:'**',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  }
 
 ];
 

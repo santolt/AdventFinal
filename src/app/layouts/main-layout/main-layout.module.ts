@@ -8,13 +8,19 @@ import { RouterModule } from '@angular/router';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { DashboardModule } from '../../modules/dashboard.module';
+import { ContainersComponent } from './components/containers/containers.component';
+import { RequestMoveComponent } from './components/request-move/request-move.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 
 @NgModule({
   declarations: [
     MainLayoutComponent,
     SidenavComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ContainersComponent,
+    RequestMoveComponent,
+    PaymentComponent,
   ],
   imports: [
     CommonModule,

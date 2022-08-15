@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PermissionsGuard } from 'src/app/core/guards/permissions/permissions.guard';
+import { ContainersComponent } from './components/containers/containers.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { RequestMoveComponent } from './components/request-move/request-move.component';
 import { MainLayoutComponent } from './main-layout.component';
 
 const routes: Routes = [
@@ -10,15 +13,16 @@ const routes: Routes = [
     // canActivate:[PermissionsGuard],
     children:[
       {
-        path:"",
-        pathMatch:"full",
-        redirectTo:"dashboard",
-
+        path: 'container',
+        component: ContainersComponent
       },
       {
-        path: "dashboard",
-        pathMatch: "full",
-        loadChildren: ()=> import('../../modules/dashboard.module').then(m=> m.DashboardModule)
+        path:'request',
+        component: RequestMoveComponent
+      },
+      {
+        path: 'payment',
+        component: PaymentComponent
       }
     ],
     

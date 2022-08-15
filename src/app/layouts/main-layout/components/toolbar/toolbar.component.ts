@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../../../../services/menu.service';
+import { Menu } from '../../../../Interfaces/menu';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  menu: Menu[] = [];
+
+  constructor(private _menuService: MenuService) { }
 
   ngOnInit(): void {
+    this.loadingMenu()
+  }
+
+  loadingMenu(){
+    this._menuService.getMenu().subscribe(data => {
+
+      console.log(data);
+      this.menu = data
+    })
   }
 
 }

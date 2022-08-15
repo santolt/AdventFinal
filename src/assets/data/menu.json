@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Container",
+        "redirect": "/containers"
+    },
+    {
+        "name": "Request",
+        "redirect": "/request"
+    },
+    {
+        "name": "Payment",
+        "redirect": "/payment"
+    }
+]

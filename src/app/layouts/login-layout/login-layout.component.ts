@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-layout',
@@ -12,7 +13,7 @@ export class LoginLayoutComponent {
   formLogin: FormGroup;
   loading: boolean = false;
 
-  constructor( public formBuilder: FormBuilder, private _snackBar: MatSnackBar ) { 
+  constructor( public formBuilder: FormBuilder, private _snackBar: MatSnackBar, private router: Router ) { 
     this.formLogin = formBuilder.group({
       email: ['', [Validators.required]],
       password: ['', [Validators.required,]]
@@ -27,7 +28,7 @@ export class LoginLayoutComponent {
     const password = this.formLogin.value.password;
 
     if(email === 'ssuarez@lean-tech.io' && password === '123456'){
-
+      this.fakeLoading()
     }else{
       this.error()
       this.formLogin.reset()
@@ -47,7 +48,7 @@ export class LoginLayoutComponent {
     this.loading = true;
 
     setTimeout(() => {
-      
+      this.router.navigate(['dashboard'])
     }, 1500);
   }
 
