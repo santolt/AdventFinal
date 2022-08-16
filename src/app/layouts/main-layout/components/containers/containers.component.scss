@@ -15,4 +15,16 @@
         font-size: 14px;
         width: 20%;
       }
+
+      mat-label{
+        display: flex;
+        justify-content: space-between;
+
+        mat-icon{
+            font-size: 21px;
+            text-align: center;
+            margin-right: .3rem;
+
+        }
+      }
 }

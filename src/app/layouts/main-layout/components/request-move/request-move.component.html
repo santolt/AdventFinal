@@ -1,5 +1,15 @@
 <div class="container">
-    <mat-toolbar>
-      <span>Reques move</span>
-    </mat-toolbar>
-  </div>
+  <mat-toolbar>
+    <span>Reques move</span>
+  </mat-toolbar>
+</div>
+
+<div class="container">
+  <mat-form-field appearance="standard" >
+    <mat-label >Search <mat-icon>search</mat-icon></mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+  
+</div>
+
+

@@ -27,7 +27,7 @@ export class LoginLayoutComponent {
     const email = this.formLogin.value.email;
     const password = this.formLogin.value.password;
 
-    if(email === 'ssuarez@lean-tech.io' && password === '123456'){
+    if(email === 'ssuarez@lean-tech.io' && password === '123456.,'){
       this.fakeLoading()
     }else{
       this.error()
@@ -48,7 +48,7 @@ export class LoginLayoutComponent {
     this.loading = true;
 
     setTimeout(() => {
-      this.router.navigate(['dashboard'])
+      this.router.navigate(['containers'])
     }, 1500);
   }
 
