@@ -13,7 +13,7 @@ const routes: Routes = [
     // canActivate:[PermissionsGuard],
     children:[
       {
-        path: 'container',
+        path: 'containers',
         component: ContainersComponent
       },
       {
