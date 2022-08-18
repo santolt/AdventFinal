@@ -31,7 +31,6 @@ export class LoginLayoutComponent {
       this.fakeLoading()
     }else{
       this.error()
-      this.formLogin.reset()
     }
   }
 

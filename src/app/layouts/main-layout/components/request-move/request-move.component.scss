@@ -5,4 +5,38 @@
     width: 80%;
     margin: 0 auto;
 
+    .container__main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        background-color: rgb(245, 245, 245);
+        padding: 5rem;
+        margin-top: 1rem;
+
+        .dropdown__trucking{
+            display: flex;
+            align-items: center;
+
+            mat-form-field{
+                margin-left: 1.5rem;
+            }
+
+        }
+
+        .buttoms{
+            button{
+                margin:0rem .5rem;
+            }
+        }
+
+        .total{
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            
+        }
+    }
+
+    
+
 }

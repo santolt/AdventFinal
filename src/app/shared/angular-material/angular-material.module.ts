@@ -32,6 +32,8 @@ import { MatTableModule } from "@angular/material/table";
 import { MatSortModule } from "@angular/material/sort";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 
 
@@ -75,6 +77,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    MatNativeDateModule
+    
+    
   ]
 })
 export class AngularMaterialModule { }

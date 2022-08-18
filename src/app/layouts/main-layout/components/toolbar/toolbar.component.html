@@ -1,5 +1,6 @@
-<mat-toolbar color="primary">
-    <span>App Users</span>
+<!-- <mat-toolbar >
+    
+    <img src="../../../../../assets/img/emodal-logo-trans-e93930.png" alt="">
 
     <span class="example-spacer"></span>
     <button *ngFor="let item of menu" mat-button [routerLink]="item.redirect" >{{item.name | titlecase}}</button>
@@ -10,4 +11,35 @@
         <mat-icon>logout</mat-icon>
       </button>
 
-  </mat-toolbar>
+  </mat-toolbar> -->
+
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidebar mode="side" opened>
+      <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content">
+        <div class="toolbar">
+          <mat-toolbar>
+              <mat-icon (click)="sidebar.toggle()" >menu</mat-icon>
+              <img src="../../../../../assets/img/emodal-logo-trans-e93930.png" alt="">
+            <div class="box">
+                <button routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                    <mat-icon>logout</mat-icon>
+                  </button>
+            </div>
+          </mat-toolbar>
+        </div>
+        <div class="main">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+
+
+
+  

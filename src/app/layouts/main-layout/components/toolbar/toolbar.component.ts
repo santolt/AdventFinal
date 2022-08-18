@@ -14,15 +14,8 @@ export class ToolbarComponent implements OnInit {
   constructor(private _menuService: MenuService) { }
 
   ngOnInit(): void {
-    this.loadingMenu()
+
   }
 
-  loadingMenu(){
-    this._menuService.getMenu().subscribe(data => {
-
-      console.log(data);
-      this.menu = data
-    })
-  }
 
 }

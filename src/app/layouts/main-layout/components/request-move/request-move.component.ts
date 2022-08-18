@@ -31,6 +31,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class RequestMoveComponent implements OnInit {
 
+  total: number = 100000;
+
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
