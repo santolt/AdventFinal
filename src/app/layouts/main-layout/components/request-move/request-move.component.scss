@@ -19,8 +19,16 @@
 
             mat-form-field{
                 margin-left: 1.5rem;
+                width: 100%;
             }
 
+        }
+
+        .container__left{
+
+            mat-form-field{
+                width:100%;
+            }
         }
 
         .buttoms{
